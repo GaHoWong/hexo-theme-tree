@@ -67,6 +67,6 @@ highlight:
   auto_detect: false
   tab_replace: ''
 ```
-
+1
 ### 访问管理
 我自己用的是百度统计 https://tongji.baidu.com ，很简单，注册后在 'head' 里加一个 '<script>' 块就行了
