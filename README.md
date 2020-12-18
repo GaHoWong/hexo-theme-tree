@@ -58,7 +58,9 @@ hexo new page --path about/index "About"
 ###  推荐插件
 
 推荐安装 [Markdown-it](https://github.com/markdown-it/markdown-it) 插件渲染 `Markdown`
-
+```
+npm install markdown-it --save
+```
 替换之后注意将 \_config.yml 中 hexo 默认的 Markdown 配置改一下
 ```
 highlight:
