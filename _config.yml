@@ -6,7 +6,7 @@ menus:
   关于: /about
 
 links:
-  github: https://github.com/wujun234
+  github: https://github.com/gahowong
   
 favicon: /favicon.ico
 
@@ -17,9 +17,9 @@ valine:
     # 阅读量
     enableCounter: false
     # valine appID
-    appID: 
+    appID: QDFKpxjtPiTO3PYoLg5pFqYO-MdYXbMMI
     # valine appKey
-    appKey: 
+    appKey: BluRciiq0gboctu2b7TXD75u
     placeholder: 请输入评论
     avatar: retro
 
