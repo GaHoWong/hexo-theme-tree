@@ -1,4 +1,7 @@
 <div id="index">
+	<script>
+		swal("欢迎来到 GaHo 的小窝！", "欢迎交流各种技术问题，关闭背景音乐在左下角哦~", "info");
+	  </script>
 	<% page.posts.each(function(post){ %>
 		<div class="index-li">
 			<a href="<%- url_for(post.path) %>">
