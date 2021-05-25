@@ -9,6 +9,20 @@ links:
   github: https://github.com/gahowong
   
 favicon: /favicon.ico
+searchAll: false
+# true 启用全文搜索
+# 在搜索框输入'in: 关键字' 实现全文搜索
+# 开启此功能需要下面操作：
+# 1. 在 hexo 根目录 执行 npm install hexo-generator-search --save 安装插件
+# 2. 在 hexo 根目录的 _config.xml 中添加下面内容
+# search:
+#   path: search.xml
+#   field: post
+
+searchTOC: true  # true 启用对各文章toc的搜索
+
+expandAll: true  # true '空格'展开目录树所有文章
+
 
 # valine 
 valine:
