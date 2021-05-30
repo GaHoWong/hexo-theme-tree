@@ -32,8 +32,8 @@ siteStartYear: 2019
 #   https://www.baidu.com/s?wd=
 #   https://www.google.com/search?q=
 # homeHost：要搜索的站点域名，不配置默认取当前页面的域名
-searchEngine: https://www.google.com/search?q=
+searchEngine: https://www.baidu.com/s?wd=
 homeHost: gaho.top
 
-#tags: true
-#categories: true
+tags: true
+categories: true
