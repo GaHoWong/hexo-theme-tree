@@ -2,27 +2,10 @@ title: tree
 
 author: 吴俊
 
-menus: 
-  关于: /about
-
 links:
-  github: https://github.com/gahowong
+  github: https://github.com/wujun234
   
 favicon: /favicon.ico
-searchAll: false
-# true 启用全文搜索
-# 在搜索框输入'in: 关键字' 实现全文搜索
-# 开启此功能需要下面操作：
-# 1. 在 hexo 根目录 执行 npm install hexo-generator-search --save 安装插件
-# 2. 在 hexo 根目录的 _config.xml 中添加下面内容
-# search:
-#   path: search.xml
-#   field: post
-
-searchTOC: true  # true 启用对各文章toc的搜索
-
-expandAll: true  # true '空格'展开目录树所有文章
-
 
 # valine 
 valine:
@@ -31,9 +14,9 @@ valine:
     # 阅读量
     enableCounter: false
     # valine appID
-    appID: QDFKpxjtPiTO3PYoLg5pFqYO-MdYXbMMI
+    appID:
     # valine appKey
-    appKey: BluRciiq0gboctu2b7TXD75u
+    appKey:
     placeholder: 请输入评论
     avatar: retro
 
@@ -42,3 +25,15 @@ busuanzi: true
 
 # 底部版权开始年份
 siteStartYear: 2019
+
+####### 站外搜索配置 #####
+# 站点如果【被搜索引擎收录】，可以配置通过搜索引擎全站搜索
+# searchEngine：搜索引擎，不配置则默认为谷歌，可替换为百度等其他搜索引擎的搜索 URL
+#   https://www.baidu.com/s?wd=
+#   https://www.google.com/search?q=
+# homeHost：要搜索的站点域名，不配置默认取当前页面的域名
+searchEngine: https://www.google.com/search?q=
+homeHost: wujun234.github.io
+
+#tags: true
+#categories: true

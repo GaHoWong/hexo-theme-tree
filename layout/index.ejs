@@ -1,15 +1,4 @@
 <div id="index">
-	<script type="text/javascript">      
-		var search_path = "<%= config.search.path %>";
-		if (search_path.length == 0) {
-			search_path = "search.xml";
-		}
-		var path = "<%= config.root %>" + search_path;
-		searchFunc(path, 'local-search-input', 'local-search-result');
-   </script>
-	<script>
-		swal("欢迎来到 GaHo 的小窝！", "欢迎交流各种技术问题，关闭背景音乐在左下角哦~", "info");
-	  </script>
 	<% page.posts.each(function(post){ %>
 		<div class="index-li">
 			<a href="<%- url_for(post.path) %>">

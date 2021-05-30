@@ -1,10 +1,9 @@
+
 <div id="sidebar">
 	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
 	<div id="site-toc">
-		<input id="search-input" class="search-input" type="text" placeholder="search...">
-		<% if (theme.searchAll) { %>
-    <div id="local-search-result" style="display: none;"></div>
-    <% } %>
+		<input id="search-input" class="search-input" type="search" placeholder="按回车全站搜索">
 		<div id="tree">
 			<%
 				<!-- 将路径转换成 tree 目录结构 -->
@@ -20,12 +19,14 @@
 							}
 							var wantedNode = chain[j];
 							var lastNode = currentNode;
+
 							for (var k = 0; k < currentNode.length; k++) {
 								if (currentNode[k].title == wantedNode) {
 									currentNode = currentNode[k].children;
 									break;
 								}
 							}
+
 							if (lastNode == currentNode) {
 								var newNode = currentNode[k] = { post: post, title: wantedNode, children: [] };
 								currentNode = newNode.children;
@@ -36,42 +37,39 @@
 					});
 					return output;
 				}
+
 			%>
 
 			<%
 				<!-- 递归输出侧边栏目录 tree -->
 				const showTree = (input) => {
-					<!-- 按tile ascii排序 -->
-					input.sort(function(a, b) {
-					    var len = a.title.length <= b.title.length ? a.title.length: b.title.length;
-					    for (var i = 0; i < len; i++) {
-					        res = a.title[i].charCodeAt() - b.title[i].charCodeAt();
-					        if (res) {
-					            return res
-					        }
-					    }
-					    if (a.title.length <= b.title.length) {
-					        return true;
-					    } else {
-					        return false;
-					    }
+
+					<!-- 按 tile ascii 排序 -->
+					input.sort(function(a, b){
+						var len = a.title.length <= b.title.length ? a.title.length : b.title.length;
+						for ( var i = 0; i < len; i++ ) {
+							res = a.title[i].charCodeAt() - b.title[i].charCodeAt();
+							if ( res ) { return res }
+						}
+						if(a.title.length <= b.title.length){
+							return true;
+						}else{
+							return false;
+						}
 					});
+
 					<!-- 循环输出 html 结构 -->
 					input.forEach(function(node) {
 						if ( node.children == 0 ) {
+
 			%>
 							<ul>
 								<li class="file<%- (is_post() && node.post._id == page._id) ? ' active' : '' %>">
-									<i class="fa fa-angle-right"></i>
 									<a href="<%- url_for(node.post.path) %><%-  %>">
-										<%- node.title %><% if (theme.expandAll) { %>  &nbsp;<% } %>
+										<%- node.title %>
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
-								<!-- 循环输出 隐藏toc 结构，便于搜索toc -->
-								<% if (theme.searchTOC) { %>
-								<div style="display: none;"><%- toc(node.post.content) %></div>
-								<% } %>
 							</ul>
 			<%
 						}
@@ -85,11 +83,13 @@
 									</a>
 									<%- showTree(node.children) %>
 								</li>
+								
 							</ul>
 			<%
 						}
 					});
 				}
+
 				showTree(pathToTree(site.posts))
 			%>
 		</div>
