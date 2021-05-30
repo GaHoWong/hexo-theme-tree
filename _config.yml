@@ -1,9 +1,9 @@
 title: tree
 
-author: 吴俊
+author: gahowong
 
 links:
-  github: https://github.com/wujun234
+  github: https://github.com/gahowong
   
 favicon: /favicon.ico
 
@@ -21,7 +21,7 @@ valine:
     avatar: retro
 
 # 是否开启“不蒜子”统计访问量
-busuanzi: true
+busuanzi: false
 
 # 底部版权开始年份
 siteStartYear: 2019
@@ -33,7 +33,7 @@ siteStartYear: 2019
 #   https://www.google.com/search?q=
 # homeHost：要搜索的站点域名，不配置默认取当前页面的域名
 searchEngine: https://www.google.com/search?q=
-homeHost: wujun234.github.io
+homeHost: gaho.top
 
 #tags: true
 #categories: true
