@@ -1,25 +1,23 @@
 <h1 id="article-title">
 	<i class="fa fa-folder-open" aria-hidden="true"></i>类别
 </h1>
-<h2 id="article-title">
-	分类:<%- site.categories.data.length %>个  标签:<%- site.tags.data.length %>个
-</h2>
-
-<div id="article-content">
+<h2 id="article-title">分类:<%- site.categories.data.length %>个</h2>
+<div id="categories">
       <% for (var j=0; j < site.categories.data.length; j++) { %>
           <% if (site.categories.data[j] && site.categories.data[j].name) { %>
-                <span>
+                <div class="categories-sort">
                     <a href="/<%- site.categories.data[j].path %>"><%- site.categories.data[j].name %>(<%- site.categories.data[j].length %>)</a>
-                </span>
+                </div>
           <% } %>
       <% } %>
 </div>
-<div id="article-content">
+<h2 id="article-title">标签:<%- site.tags.data.length %>个</h2>
+<div id="categories">
       <% for (var j=0; j < site.tags.data.length; j++) { %>
           <% if (site.tags.data[j] && site.tags.data[j].name) { %>
-                <span>
-                      <a href="/<%- site.tags.data[j].path %>"><%- site.tags.data[j].name %>(<%- site.tags.data[j].length %>)</a>
-                </span>
+                <div class="categories-label">
+                      <a href="/<%- site.tags.data[j].path %>"><%- site.tags.data[j].name %>(<%- site.tags.data[j].length %>)  </a>
+                </div>
           <% } %>
       <% } %>
 </div>
