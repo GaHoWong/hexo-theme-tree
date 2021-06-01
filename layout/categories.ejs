@@ -1,20 +1,25 @@
 <h1 id="article-title">
-	<i class="fa fa-folder-open" aria-hidden="true"></i>分类
+	<i class="fa fa-folder-open" aria-hidden="true"></i>类别
 </h1>
 <h2 id="article-title">
-	目前共计 <%- site.categories.data.length %> 个分类
+	分类:<%- site.categories.data.length %>个  标签:<%- site.tags.data.length %>个
 </h2>
 
 <div id="article-content">
-	<ul>
       <% for (var j=0; j < site.categories.data.length; j++) { %>
           <% if (site.categories.data[j] && site.categories.data[j].name) { %>
-            <li class="menu-item">
                 <span>
                     <a href="/<%- site.categories.data[j].path %>"><%- site.categories.data[j].name %>(<%- site.categories.data[j].length %>)</a>
                 </span>
-            </li>
           <% } %>
       <% } %>
-	</ul>
+</div>
+<div id="article-content">
+      <% for (var j=0; j < site.tags.data.length; j++) { %>
+          <% if (site.tags.data[j] && site.tags.data[j].name) { %>
+                <span>
+                      <a href="/<%- site.tags.data[j].path %>"><%- site.tags.data[j].name %>(<%- site.tags.data[j].length %>)</a>
+                </span>
+          <% } %>
+      <% } %>
 </div>
